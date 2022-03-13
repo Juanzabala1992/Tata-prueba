@@ -3,16 +3,29 @@
         <div class="names">
             <div class="name">
                 <label>Nombre</label>
-                <input type="text" class="form-control" placeholder="Primer nombre" formControlName="nombre">
+                <input type="text" class="form-control" placeholder="Primer nombre" formControlName="nombre" required>
+                <div class="alert-danger" *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
+                    <div class="container-error-message">
+                        Se requiere un nombre de al menos 4 caracteres
+                    </div>
+                </div>
             </div>
             <div class="lastName">
                 <label>Empleo</label>
                 <input type="text" class="form-control" placeholder="Empleo" formControlName="empleo">
+                <div class="alert-danger" *ngIf="empleo.invalid && (empleo.dirty || empleo.touched)">
+                    <div class="container-error-message">
+                        Empleo requerido
+                    </div>
+                </div>
             </div>
         </div>
         <div class="buttons">
             <div class="Guardar">
-                <button type="button" class="btn btn-primary" (click)="save(postForm.value)">Guardar</button>
+                <button type="button" class="btn btn-primary" [disabled]="!this.postForm.valid" (click)="save(postForm.value)">Guardar</button>
+                <div class="alert alert-success" role="alert" *ngIf="this.postForm.valid && this.valid">
+                    Guardado exitosamente
+                </div>
             </div>
         </div>
     </form>

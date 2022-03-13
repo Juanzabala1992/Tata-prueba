@@ -3,20 +3,38 @@
         <div class="names">
             <div class="id">
                 <label>id</label>
-                <input type="text" class="form-control" placeholder="id" formControlName="identifier">
+                <input type="number" class="form-control" placeholder="id" formControlName="identifier">
+                <div class="alert-danger" *ngIf="identifier.invalid && (identifier.dirty || identifier.touched)">
+                    <div class="container-error-message">
+                        Se requiere un numero
+                    </div>
+                </div>
             </div>
             <div class="name">
                 <label>Nombre</label>
                 <input type="text" class="form-control" placeholder="Primer nombre" formControlName="nombre">
+                <div class="alert-danger" *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
+                    <div class="container-error-message">
+                        Se requiere un nombre de al menos 4 caracteres
+                    </div>
+                </div>
             </div>
             <div class="lastName">
                 <label>Empleo</label>
                 <input type="text" class="form-control" placeholder="Empleo" formControlName="empleo">
+                <div class="alert-danger" *ngIf="empleo.invalid && (empleo.dirty || empleo.touched)">
+                    <div class="container-error-message">
+                        Empleo requerido
+                    </div>
+                </div>
             </div>
         </div>
         <div class="buttons">
             <div class="editar">
                 <button type="button" class="btn btn-danger" (click)="delete(postForm.value)">Borrar</button>
+                <div class="alert alert-success" role="alert" *ngIf="this.postForm.valid && this.valid">
+                    Editado exitosamente
+                </div>
             </div>
         </div>
     </form>
