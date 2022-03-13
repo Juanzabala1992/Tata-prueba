@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="lista">
+        <ul *ngIf="!this.view">
+            <li *ngFor="let info of information" (click)="detailData(info)">Name:{{info.first_name}}</li>
+        </ul>
+        <ul *ngIf="this.view">
+            <li *ngFor="let infos of informationPost" (click)="detailData(infos)">Name:{{infos.nombre}}</li>
+        </ul>
+ </div>
+        <div class="paginacion">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                  <li class="page-item" (click)="pagination(1)"><a class="page-link">1</a></li>
+                  <li class="page-item" (click)="pagination(2)"><a class="page-link">2</a></li>
+                  <li class="page-item" (click)="pagination(3)" *ngFor="let infos of paginationinfo; let indice = index">
+                      <a class="page-link">{{this.paginationinfo[indice]}}</a></li>
+                </ul>
+            </nav>
+        </div>
+</div>

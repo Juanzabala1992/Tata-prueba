@@ -1,0 +1,22 @@
+<div class="container">
+    <form [formGroup]="postForm" (ngSubmit)="save(postForm.value)">
+        <div class="names">
+            <div class="name">
+                <label>Nombre</label>
+                <input type="text" class="form-control" placeholder="Primer nombre" formControlName="nombre">
+            </div>
+            <div class="lastName">
+                <label>Empleo</label>
+                <input type="text" class="form-control" placeholder="Empleo" formControlName="empleo">
+            </div>
+        </div>
+        <div class="buttons">
+            <div class="Guardar">
+                <button type="button" class="btn btn-primary" (click)="save(postForm.value)">Guardar</button>
+            </div>
+            <div class="editar">
+                <button type="button" class="btn btn-secondary" (click)="edit(postForm.value)">Editar</button>
+            </div>
+        </div>
+    </form>
+</div>

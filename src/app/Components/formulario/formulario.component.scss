@@ -1,0 +1,16 @@
+.container{
+    margin:5px;
+    padding: 5px;
+}
+.names{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+}
+.name{
+    width: 40%;
+}
+.lastName{
+    width: 40%;
+}

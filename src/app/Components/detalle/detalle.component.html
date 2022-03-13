@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="data">
+        <ul *ngIf="this.view">
+            <li>{{this.infoClient.id}}</li>
+            <li>{{this.infoClient.email}}</li>
+            <li>{{this.infoClient.first_name}}</li>
+            <li>{{this.infoClient.last_name}}</li>
+            <li>{{this.infoClient.avatar}}</li>       
+        </ul>
+        <ul *ngIf="this.view2">
+            <li>{{this.infoPost.id}}</li>
+            <li>{{this.infoPost.nombre}}</li>
+            <li>{{this.infoPost.empleo}}</li>
+            <li>{{this.infoPost.createdAt}}</li>
+        </ul>
+    </div>
+</div>
