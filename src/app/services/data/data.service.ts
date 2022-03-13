@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {ListaData} from 'src/app/models/lista-data';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {Observable} from 'rxjs';
 import { Router } from '@angular/router';
 
@@ -21,8 +21,19 @@ export class DataService {
     let direccion = this.url+"api/users";
     return this.http.post<Response>(direccion,form);
   }
-  putData(form:any):Observable<Response>{
-    let direccion = this.url+"api/users"+form.id;
+  putData(form:any):Observable<Response>{    
+    let direccion = this.url+"api/users"+form.identifier;
     return this.http.put<Response>(direccion,form);
-  }
+  }  
+  deleteData(form:any){    
+    let direccion = this.url+"api/users"+form.identifier;
+    let options= {
+      Headers: new HttpHeaders({
+        'Content-type':'application/json'
+      }),
+      body: form,
+      responseType: 'text' as 'json'
+    }
+    return this.http.delete<Response>(direccion,options);
+  }  
 }

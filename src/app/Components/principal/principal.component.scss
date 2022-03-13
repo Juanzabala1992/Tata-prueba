@@ -14,33 +14,38 @@
     height: 30%;
     text-align: center;
     margin: 5px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+    border: 0;
 }
 .body{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     border-style: dashed;
-    border-color: red;
-    justify-content: space-between;
+   justify-content: space-between;
+   border: 0;
 }
 .formulario{
     width: 100%;
     text-align: center;
     border-style: dashed;
-    border-color: red;
+    box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+    border: 0;
     margin: 5px;
 }
 .lista{
     width: 55%;
     text-align: center;
     border-style: dashed;
-    border-color: red;
     margin: 5px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+    border: 0;
 }
 .detalle{
     width: 40%;
     text-align: center;
     border-style: dashed;
-    border-color: red;
     margin: 5px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+    border: 0;
 }

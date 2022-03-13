@@ -6,3 +6,8 @@
     display: flex;
     justify-content: center;
 }
+.lista li:hover{    
+    cursor: pointer;
+    background-color: cornflowerblue;
+    color: white;
+}

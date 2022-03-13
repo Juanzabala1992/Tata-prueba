@@ -14,6 +14,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { FormularioEditComponent } from './Components/formulario-edit/formulario-edit.component';
+import { FormularioDeleteComponent } from './Components/formulario-delete/formulario-delete.component';
+import { OptionsComponent } from './Components/options/options.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import {NgxPaginationModule} from 'ngx-pagination';
     FormularioComponent,
     DetalleComponent,
     ListaComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    FormularioEditComponent,
+    FormularioDeleteComponent,
+    OptionsComponent,
   ],
   imports: [
     BrowserModule,

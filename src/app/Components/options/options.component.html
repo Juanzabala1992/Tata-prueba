@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="cards">
+        <div class="cards-container" (click)="optionSelect('save')">
+            <div class="card" > 
+              <div class="image">             
+                <img src="./assets/icons/floppy-disk.png" class="card-img-top">
+              </div>
+                <div class="card-body">
+                   <p class="card-text">Guardar</p>
+                </div>
+              </div>
+        </div>
+        <div class="cards-container" (click)="optionSelect('edit')">
+            <div class="card">
+              <div class="image">
+                <img src="./assets/icons/edits.png" class="card-img-top" alt="...">
+              </div>                  
+                <div class="card-body">
+                  <p class="card-text">Editar<p>
+                </div>
+              </div>
+        </div>
+        <div class="cards-container" (click)="optionSelect('delete')">
+            <div class="card">
+              <div class="image">
+                <img src="./assets/icons/delete.png" class="card-img-top" alt="...">
+              </div>                
+                <div class="card-body">
+                  <p class="card-text">Borrar</p>
+                </div>
+              </div>
+        </div>
+    </div>
+    <app-formulario *ngIf="view"></app-formulario>
+    <app-formulario-edit *ngIf="view2"></app-formulario-edit>
+    <app-formulario-delete *ngIf="view3"></app-formulario-delete>
+</div>
